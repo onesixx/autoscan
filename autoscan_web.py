@@ -1,22 +1,16 @@
-# pip install pyautogui
-# pip install keyboard  
-# pip install keyboard  
-
-import pyautogui 
-import pyperclip
-import time
-import keyboard
-import os
+# pip install pyautogui keyboard  keyboard  
+import pyautogui, pyperclip 
+import os, time, keyboard 
 
 start_page = 1
-total_page = 350
-book_name = 'Resilience'
-top_x = 1700
-top_y = -900
-end_x = 2730
-end_y =  350
-roi = (1700, -900,  abs(end_x-top_x), abs(end_y-top_y))
-ebook_screen_next_page =(2735,-275)
+total_page = 710
+book_name = 'principle'
+top_x = 1803
+top_y = -937
+end_x = 2682
+end_y = 169 
+roi = (top_x, top_y,  abs(end_x-top_x), abs(end_y-top_y))
+ebook_screen_next_page =(2720,-390)
 sleep_time = 1.0
 
 if not os.path.exists(os.path.join("data", book_name)):
@@ -38,7 +32,7 @@ for i in range(int(start_page), int(total_page)):
 
     if i%25 == 0 :
         print("==========Check Time=========")
-        time.sleep(10)
+        time.sleep(3)
 
     # ---  Next Page 
     cursor_position = pyautogui.position()    

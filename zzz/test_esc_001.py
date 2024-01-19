@@ -6,7 +6,7 @@ import time
 print("Press ESC to stop")
 
 while True:
-    if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
+    if sys.stdin in elect.select([sys.stdin], [], [], 0)[0]:
         key = sys.stdin.read(1)  # Get the key that was pressed
         if key == '\x1b':  # ESC key
             print("ESC pressed, stopping...")
